@@ -544,7 +544,7 @@ vcov.glmmTMB <- function(object, full = FALSE, include_nonest = TRUE,
               mm <- matrix(NA_real_, length(fnm), length(fnm),
                            dimnames=list(fnm, fnm))
 
-              estNameList <- getParnames(object, full, include_mapped = FALSE,
+              estNameList <- getParnames(object, full, include_mapped = TRUE,
                                          include_dropped = FALSE, include_mapequal = TRUE)
 
               nms <- estNameList[[cnm]]

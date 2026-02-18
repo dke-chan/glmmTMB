@@ -188,7 +188,7 @@ emm_basis.glmmTMB <- function (object, trms, xlev, grid, component = c("cond", "
                       disp = list(link = "log"))
         misc <- emmeans::.std.link.labels(fam, misc)
         if (missing(vcov.)) {
-            V <- as.matrix(vcov(object, include_nonest = FALSE)[[component]])
+            V <- as.matrix(vcov(object)[[component]])
         }
         else {
             V <- vcov.
